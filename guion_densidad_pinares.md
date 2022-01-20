@@ -42,9 +42,18 @@ Lo anterior se puede ver gráficamente en esta imagen:
 
 
 ## Secuencia de sesiones
+La secuencia de acciones que se muestra a continuación pretende simular el proceso por el que abordamos un problema nuevo como el que nos ocupa. Es un proceso un poco detectivesco porque casi nunca tenemos toda la información sobre la mesa (y bien documentada) desde el principio. Iremos poco a poco construyendo un camino y recorriéndolo a la vez.
+
 ### Día 1 (17/01/2022). 
-+ Iniciamos la metodología de captura de datos que se usó para generar la información que necesitamos: inventarios forestales. Esta presentación muestra los principales conceptos que resultan importantes para nuestros objetivos. 
-+ Generalidades sobre bases de datos. Presentación.
+
++ Iniciamos la metodología de captura de datos que se usó para generar la información que necesitamos: inventarios forestales. [Esta](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/presentaciones/inventarios_forestales.pptx) presentación muestra los principales conceptos que resultan importantes para nuestros objetivos. 
++ Al analizar la estructura del inventario forestal tomamos conciencia que sus datos se almacenan en una base de datos relacional. Así que, el primer paso es aprender cómo funcionan estos instrumentos. La siguiente presentación (descargable versión dimánica aquí para mac y aquí para Windows. Aquí la tienes en pdf) muestra los elementos básicos de las bases de datos relacionales. 
+
+<p><iframe src="https://prezi.com/view/bHpJ0HBvXNXvC96XS5pe/embed" width="1200" height="900"> </iframe></p>
+
+
+
+
 + Construcción del diagrama entidad-relación. Enlace a drawio e imagen.
 + construimos la base de datos a partir de este texto:
 
@@ -81,7 +90,6 @@ AUdio describiendo lo que hicimos:
 
 
 ### Día 4 (20/01/2022)
-
 
 [Spatial interpolation: a brief introduction](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php): Muy buen resumen de la teoría de la interpolación y de los dos grandes grupos de técnicas que hemos visto en clase. 
 [Introduction to spatial analysis](http://planet.botany.uwc.ac.za/nisl/GIS/spatial/index.htm): Texto bastante completo en el que se detallan varias técnicas de interpolación. Hace mucho hincapié en la interpolación de modelos digitales de elevaciones.
