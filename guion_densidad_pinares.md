@@ -63,30 +63,41 @@ La secuencia de acciones que se muestra a continuación pretende simular el proc
 
 
 
-+ A continuación traducimos el esquema entidad-relación anterior a una base de datos relacional propiamente dicha. Para ello usamos el programa *base* de la suite de ofimática *LibreOffice*. Es nuestra primera base de datos. Aquí puedes descargar la que hice yo durante la sesión. 
-
-
+A continuación puedes ver el vídeo con la grabación de la clase:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KO0qtpAIkPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+
 ### Día 2 (18/01/2022).
-+ Creación de base de datos a partir del diagrama entidad-relación anterior.
+
++ A partir del diagrama entidad-relación anterior, construimos una base de datos relacional propiamente dicha. Para ello usamos el programa *base* de la suite de ofimática *LibreOffice*. Es nuestra primera base de datos. [Aquí](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/miprimerabasededatos.odb) puedes descargar la que hice yo durante la sesión. Construimos las tablas con sus campos y finalmente las relaciones.
++ Las primeras relaciones son sencillas (ojo, esto solo sirve para bases de datos no para relaciones entre personas): de uno a muchos. En algunas ocasiones hay relaciones de muchos a muchos, como en el caso de que queramos asignar más de un muestreador a cada visita.
++ Al finalizar esta sesión disponemos del conocimiento necesario para intepretar correctamente la información contenida en el inventario forestal Sinfonevada.
+
+
+
+El siguiente vídeo muestra la grabación de la clase:
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pczm48Q8Q9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### Día 3 (19/01/2022).
-+ Estudiar la base de datos que realmente contiene información.
-+ Identificar las variables que usaremos para nuestro trabajo. Formular las preguntas que queremos hacer a la base de datos.
-+ Identificamos los campos de densidad para asignar un valor único de esta variable a cada parcela. 
-+ Estudiar la capa de estratos que se relaciona con la base de datos.
-+ Observamos que disponemos de dos formas de generar un mapa de densidad: estratos y puntos.
-+ Analizamos este hecho con detalle. Presentación.
-+ Ahora estamos en disposición de construir un flujo de trabajo detallado con lo que queremos hacer. Hemos identificado una fuente de datos importante. La hemos analizado y hemos encontrado dos posibles formas de hacer lo que necesitamos. Flujo de trabajo.
-  + Mapa de densidad por imputación: Descripción del paso a paso.
 
-AUdio describiendo lo que hicimos:
+### Día 3 (19/01/2022).
+
++ Empezamos la sesión abriendo la versión de la base de datos que contiene la información que necesitamos. [Aquí](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/input/bbdd_sinfonevada.zip) puedes descargarte la base de datos. En el archivo zip hay una versión para Libreoffice y otra para Microsoft Access.
++ Abrimos la base de datos y tratamos de interpretar su contenido. Vemos que tiene una estructura muy parecida a la que hemos hecho los días anteriores. Identificamos varios campos que podrían ser de utilidad para calcular la densidad. En concreto, vemos que hay dos campos de densidad en las tablas: **PARCELA_DATOS_CEPAS_M_BAJO** y **PARCELA_DATOS_PIES_M_ALTO**. Sabiamente deducimos que con estos dos campos podemos obtener una capa que asigne un valor de densidad a cada parcela. Decidimos que los dos valores de los campos anteriores son sumables.
++ También observamos que hay una tabla que no conocíamos: **explota_PARCELAS_POR_ESTRATO20**. Esta tabla asigna a cada parcela el código del estrato en el que se encuentra. Recordemos que los estratos son polígonos que tienen la misma orientación, vegetación, piso bioclimático y tipo de suelo. Es una técnica que usamos para estratificar el muestreo antes de hacer el inventario. 
++ Para entender mejor esto descargamos la capa SIG que contiene la distribución de los estratos. [Aquí](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/input/estratos.zip) puedes descargar el shapefile con los estratos. Y aprovechamos esta necesidad para aprender un poco el manejo de QGIS. Concretamente hacemos lo siguiente:
+  + Cargar una capa vectorial.
+  + Cargar un servicio WMS con una ortofoto.
+  + Cambiar los colores de los polígonos.
+  + Guardar un proyecto de QGIS.
+
++ La existencia de la capa de estratos abre la posibilidad de obtener un mapa de densidad de otra manera diferente a la esbozada anteriormente. En este caso nos planteamos la posibilidad de obtener un mapa de densidad asignando a todos los polígonos de cada estrato la densidad promedio de los puntos de inventario que hay en los mismos. Discutimos brevemente las ventajas e inconvenientes de esta decisión. Nos quedamos con una idea preliminar de un concepto muy común al trabajar con SIG: la imputación espacial. 
+
+Por una razón que desconozco en esta sesión no se grabó la pantalla. Así que solo tenemos el audio:
 
 <iframe src="https://www.ivoox.com/player_ej_81121377_6_1.html?c1=8daa4d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
 
@@ -94,6 +105,19 @@ AUdio describiendo lo que hicimos:
 
 
 ### Día 4 (20/01/2022)
+
++ Empezamos la sesión reptiendo el concepto de imputación y comparándolo con el de interpolación, que también pondremos en práctica en esta sesión. Las dos figuras mostradas más abajo resumen bien las dos metodologías que usaremos a continuación:
+
+
+
+
+
+
+
++ Ahora estamos en disposición de construir un flujo de trabajo detallado con lo que queremos hacer. Hemos identificado una fuente de datos importante. La hemos analizado y hemos encontrado dos posibles formas de hacer lo que necesitamos. Flujo de trabajo.
+  + Mapa de densidad por imputación: Descripción del paso a paso.
+
+
 
 [Spatial interpolation: a brief introduction](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php): Muy buen resumen de la teoría de la interpolación y de los dos grandes grupos de técnicas que hemos visto en clase. 
 [Introduction to spatial analysis](http://planet.botany.uwc.ac.za/nisl/GIS/spatial/index.htm): Texto bastante completo en el que se detallan varias técnicas de interpolación. Hace mucho hincapié en la interpolación de modelos digitales de elevaciones.
