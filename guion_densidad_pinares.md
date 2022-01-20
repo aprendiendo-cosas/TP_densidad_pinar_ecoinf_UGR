@@ -49,19 +49,23 @@ La secuencia de acciones que se muestra a continuación pretende simular el proc
 + Iniciamos la metodología de captura de datos que se usó para generar la información que necesitamos: inventarios forestales. [Esta](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/presentaciones/inventarios_forestales.pptx) presentación muestra los principales conceptos que resultan importantes para nuestros objetivos. 
 + Al analizar la estructura del inventario forestal tomamos conciencia que sus datos se almacenan en una base de datos relacional. Así que, el primer paso es aprender cómo funcionan estos instrumentos. La siguiente presentación (descargable versión dimánica aquí para mac y aquí para Windows. Aquí la tienes en pdf) muestra los elementos básicos de las bases de datos relacionales. 
 
-<p><iframe src="https://prezi.com/view/bHpJ0HBvXNXvC96XS5pe/embed" width="1200" height="900"> </iframe></p>
+<p><iframe src="https://prezi.com/view/bHpJ0HBvXNXvC96XS5pe/embed" width="1200" height="600"> </iframe></p>
+
++ Después de conocer cómo se organizan los datos en una base de datos, procedemos a construir una que recoja las principales características de nuestro inventario forestal. Para ello nos basamos en el siguiente texto que hará las veces de "descripción literal de la base de datos": 
+
+>*La metodología consiste en visitar una serie de parcelas que se delimitan con puntos. Cada parcela se caracteriza por su nombre, ubicación, altitud, pendiente media, orientación media, temperatura y precipitación media anual. En cada parcela caracterizamos los “pies de monte alto”, que son las plantas consideradas adultas o con porte arborescente. Para ello contamos el número de árboles mayores (más de 2 m de altura), el número de árboles menores, así como la densidad total de árboles y la regeneración (densidad del regenerado). También calculamos el área basimétrica de la parcela. Además, en cada visita anotamos: los nombres de las personas que realizan la visita, la hora de inicio-fin y el tipo de suelo de la parcela.*
+
+
+
++ Este proceso da lugar a un diagrama entidad-relación que consta de los elementos que se pueden ver en la siguiente figura (puedes descargar el diagrama aquí)
+
+<iframe frameborder="0" style="width:100%;height:579px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=2021_2022_bbdd_inventario_forestal.drawio#R5ZtNe5s4EIB%2FDcfmAcTn0R%2FZ5rDb5mm62%2BYog2JrF5BXiMTur1%2FJSDYgu6EbG9nOpUUjQcRoXkYzGltgkq8%2BUrhc%2FEFSlFmuna4sMLVcN%2FJt%2Fq8QrGtB4ErBnOK0Fjk7wQP%2BgaRQDatwisrWQEZIxvCyLUxIUaCEtWSQUvLSHvZEsvZfXcI50gQPCcx06TecskUtdQEIdh13CM8X6k8Hvlf35FCNlq9SLmBKXhoicGuBCSWE1Vf5aoIyoTylmPq%2B3w70bmdGUcH63BB9eUwfRvNyWsWLRfLt89e71eyDWz%2FlGWaVfON7SBOUQTlntlaaoKQqUiSeZVtg%2FLLADD0sYSJ6X%2FjSc9mC5RlvOfxSn5uc7jOiDK0aIjnXj4jkiNE1HyJ7w0DqTVqOE8v2y24dHCBli8YSKJODcunn20fvlMMvpH5%2BRVdAUwpKubXIJqFsQeakgNntTjpuq2035ndCllJZfyPG1tL0YcVIW5Vcg3T9Xd6%2FaTyKxo2vmtNVs3O6lq2DS1CSiiboJ%2B%2FpKNAgnSP2uvEIJfx0RSm3J4af20gdfXnUtBu2%2FInkM4q0VeMWyNpKLhkl%2F6AJyQjlkoIUYumecJZ1RDDD84I3E65UxOVjYc%2BYfy5GsiPHabpZ932AtG3hCIxsv6aKEVdnJNiDCDgZIp4JRN5g6kc3YXnrPcF8Lgc%2FZlunoB5Rsybv6izCdhpvYEP%2Fzv8543abYGsCrDEo3hEjoWlG%2FHNyI%2BEJ%2FQi4TD8CNFZGfMPJKpZeMSWg84GyTVMSmKVkt796bPYdHxLvMiHxNEjuUZFiYc0i%2BEEp1kOI66XFN01LaJqW0GvxcmPb8SvMbFr3iGKuArGmbwXJv0yQfA2kz1Rg1NybXT1Pne0xMB7HRIZ5CoDb4ckDA%2FMU9ORJpcJOHkM5nY9uOHAMFWikfkX5ElHIKnrFcAK%2FrXcvMA1nbBROxxoqDxcaI%2FBtLi3U94YUJXiJ9zo1GxYVzK6XHy%2Fs8OMY5kc92Jxzc1oMmXBuUU%2B0vDNDK9LQ%2BmRNXGs8EorAqOT%2FpSIAE5SNHDoj2UaWwzWh4upaIYuiNmSB6fwFcDRln3cmPL5QIuKeRMAdDKi4bhhirwOD6R0bcE17HDto79oGT0%2BoiPbS%2BFLzbvA1RUWJU5iKtyHsmrduXZCMhz7AbAlCO%2FQ5WeCzrfQZnpUDqYfO7kJb4BOnHraWu4PwC5qjAtH3cIIbd7LtvvG9nZEqh4Y7i2PQIvHGG9yduRfqzlyNJMFP5FAkUhEzWOJ8EzvFjHKLv2KoOq7NN32EBYwcYf1%2FAkDf86Yzy84B%2FcBJlcnVgZKo%2FbSXiJZckfzq3wptNnq5aKSQkT6BU39j54EY%2FgFnm0eJNVwKH7p5Z39s%2BVPxLL5oZb1%2Bv8LbERhxOm5%2FXwnqtpKrCUm3uutoi%2BeZPpfyvNY57wceSTkDux7Q92DKPcnmcEQpXDcGSIM9uHf04rYRAd9vmsGr41W92qHxkcoJ7h%2FPL%2BoZH3VDCvSzsL9widkmnb%2F9hpxJJbnbOcACQMd42Epy5XuNYWx38yGBEwxMcd9847m5Tz3feEcoVM4TFzjB5P14yNBvobXvbCse1EGazjSCsFu4MTRZXt%2FsyZmR5elJjiZZT7hPiuM6sHI7pS7enuAsHBQrwzXrjTL105bjepdZjuvp5bgML4lip6xQ9n6cUtgpuACRTk80KD3Gq3MHgsdcyeDb1kePZqZ1osN%2BEifFDNYHx2TGUIHTTQcqVJjzLAMfw1GO3%2FEZ%2Fp7fOR0ryuHN3e%2BW65hy9%2BtvcPsf"></iframe>
 
 
 
 
-+ Construcción del diagrama entidad-relación. Enlace a drawio e imagen.
-+ construimos la base de datos a partir de este texto:
 
 
-
-
-
-*La metodología consiste en visitar una serie de parcelas que se delimitan con puntos. Cada parcela se caracteriza por su nombre, ubicación, altitud, pendiente media, orientación media, temperatura y precipitación media anual. En cada parcela caracterizamos los “pies de monte alto”, que son las plantas consideradas adultas o con porte arborescente. Para ello contamos el número de árboles mayores (más de 2 m de altura), el número de árboles menores, así como la densidad total de árboles y la regeneración (densidad del regenerado). También calculamos el área basimétrica de la parcela. Además, en cada visita anotamos: los nombres de las personas que realizan la visita, la hora de inicio-fin y el tipo de suelo de la parcela.*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KO0qtpAIkPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
