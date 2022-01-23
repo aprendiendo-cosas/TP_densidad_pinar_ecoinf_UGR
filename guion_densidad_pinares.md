@@ -104,7 +104,7 @@ Por una razón que desconozco en esta sesión no se grabó la pantalla. Así que
 
 
 
-### Día 4 (20/01/2022)
+### Día 4 (21/01/2022)
 
 + Empezamos la sesión reptiendo el concepto de imputación y comparándolo con el de interpolación, que también pondremos en práctica en esta sesión. Las dos figuras mostradas más abajo resumen bien las dos metodologías que usaremos a continuación:
 
@@ -129,6 +129,13 @@ Por una razón que desconozco en esta sesión no se grabó la pantalla. Así que
   + El mismo mapa anterior pero en formato raster: *[densidad_x_estrato.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/output/densidad_x_estrato.tif)*
   + Mapa de los pinares de repoblación en formato raster: *[mascara_pinares.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/output/mascara_pinares.tif)*
   + Densidad de los pinares en formato raster: *[densidad_pinar_x_estratos.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/main/geoinfo/output/densidad_pinar_x_estratos.tif)*
+
+A continuación puedes ver el vídeo de la sesión:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Utj_rQSS0_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Día 5 (24/01/2022)
+
+
 + Una vez ejecutada esta primera "hebra" del flujo de trabajo, abordamos la obtención de un mapa de densidad mediante interpolación. Esta técnica es algo más compleja de entender, así que os paso aquí las siguientes referencias por si queréis profundizar en el tema:
   + [Spatial interpolation: a brief introduction](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php): Muy buen resumen de la teoría de la interpolación y de los dos grandes grupos de técnicas que utilizaremos.
   + [Introduction to spatial analysis](http://planet.botany.uwc.ac.za/nisl/GIS/spatial/index.htm): Texto bastante completo en el que se detallan varias técnicas de interpolación. Hace mucho hincapié en la interpolación de modelos digitales de elevaciones.
