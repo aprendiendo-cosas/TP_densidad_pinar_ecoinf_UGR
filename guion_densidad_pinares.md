@@ -147,7 +147,10 @@ A continuación puedes ver el vídeo de la sesión:
   + Capa raster mostrando la densidad de toda Sierra Nevada interpolando la densidad de las parcelas con pinar: *[densidad_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/output/densidad_interpolada.tif)*. Ojo, esta capa está en un sistema de referencia diferente al resto (WGS84)
   + Capa raster mostrando la densidad de los pinares de Sierra Nevada: *[densidad_pinar_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/output/densidad_interpolada.tif)*
 
+A continuación puedes ver el vídeo de la sesión:
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rtMJjCmGULo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Vídeo resumen
