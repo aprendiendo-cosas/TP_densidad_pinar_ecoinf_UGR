@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>guion_densidad_pinares</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='caracterización-de-la-distribución-espacial-de-la-densidad-de-los-pinares-de-repoblación-en-sierra-nevada'><span>Caracterización de la distribución espacial de la densidad de los pinares de repoblación en Sierra Nevada</span></h1><blockquote><ul><li><strong><em><span>Versión</span></em></strong><span>: 2021-2022</span></li><li><strong><em><span>Asignatura (titulación)</span></em></strong><span>: Ciclo de gestión del dato: ecoinformática (máster conservación, gestión y restauración de la biodiversidad. UGR). </span></li><li><strong><em><span>Autor</span></em></strong><span>:  Curro Bonet-García (fjbonet@uco.es)</span></li><li><strong><em><span>Duración</span></em></strong><span>: Diez horas (cinco sesiones de dos horas)</span></li><li><em><strong><span>Versión:</span></strong></em><span> 1.1</span></li></ul></blockquote><p>&nbsp;</p><h2 id='objetivos-del-acto-docente'><span>Objetivos del acto docente</span></h2><p><span>Este acto docente tiene los siguientes objetivos:</span></p><ul><li><p><span>Disciplinares: objetivos relacionados con la ecología:</span></p><ul><li><span>Conocer cómo cambia en el dominio del espacio la distribución de la densidad de los bosques de Sierra Nevada.</span></li><li><span>Generar un mapa de densidad de los pinares de repoblación en Sierra Nevada.</span></li></ul></li><li><p><span>Instrumentales: Objetivos relacionados con la adquisición de competencias en el manejo de herramientas. </span></p><ul><li><span>Aprender a usar bases de datos relacionales.</span></li><li><span>Aprender a asignar valores de una variable en un mapa en sitios donde no se han tomado datos de campo. Para ello usaremos la interpolación e imputación espacial. </span></li><li><span>Mejorar el manejo de los SIG y de R.</span></li></ul></li></ul><p>&nbsp;</p><h2 id='hilo-argumental'><span>Hilo argumental</span></h2><p><span>El hilo argumental seguido en este acto docente es una cascada de razonamientos:</span></p><ul><li><span>La densidad de los pinares es una variable clave que explica la regeneración de la encina bajo su dosel. </span></li><li><span>Por tanto necesitamos generar un mapa que muestre la distribución de la densidad de los pinares en Sierra Nevada.</span></li><li><span>Para obtener este mapa usaremos los datos generados por un inventario forestal realizado en Sierra Nevada en 2005 (SinfoNevada). Los datos de este inventario se almacenan en una base de datos relacional.</span></li><li><span>Por tanto, para acceder a dichos datos necesitamos aprender a usar bases de datos relacionales...</span></li><li><span>Cuando aprendamos lo anterior veremos que la información que suministra el inventario se refiere a una serie de puntos. Pero nosotros necesitamos datos de densidad para todo el territorio de Sierra Nevada.</span></li><li><span>Para resolver esto usaremos técnicas de análisis que nos permitirán &quot;extender&quot; los datos de densidad desde los puntos de inventario a lugares en los que no se han tomado datos de campo.</span></li><li><span>Haremos lo anterior usando dos técnicas muy diferentes. Esto dará lugar a dos resultados distintos.</span></li><li><span>Además, al final de todo veremos otro mapa de densidad obtenido mediante teledetección. Reflexionaremos sobre los resultados obtenidos en los tres casos.</span></li></ul><p><span>Lo anterior se puede ver gráficamente en esta imagen:</span></p><p><img src="https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/imagenes/hilo_argumental.jpg" referrerpolicy="no-referrer" alt="image"></p><p>&nbsp;</p><h2 id='secuencia-de-sesiones'><span>Secuencia de sesiones</span></h2><p><span>La secuencia de acciones que se muestra a continuación pretende simular el proceso por el que abordamos un problema nuevo como el que nos ocupa. Es un proceso un poco detectivesco porque casi nunca tenemos toda la información sobre la mesa (y bien documentada) desde el principio. Iremos poco a poco construyendo un camino y recorriéndolo a la vez.</span></p><h3 id='día-1-17012022'><span>Día 1 (17/01/2022). </span></h3><ul><li><span>Iniciamos la metodología de captura de datos que se usó para generar la información que necesitamos: inventarios forestales. </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/inventarios_forestales.pptx'><span>Esta</span></a><span> presentación muestra los principales conceptos que resultan importantes para nuestros objetivos. Y en </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/biblio/descripcion_sinfonevada.pdf'><span>este</span></a><span> artículo tienes una descripción más detallada de la estructura de datos del inventario. </span></li><li><span>Al analizar la estructura del inventario forestal tomamos conciencia que sus datos se almacenan en una base de datos relacional. Así que, el primer paso es aprender cómo funcionan estos instrumentos. La siguiente presentación (descargable versión dinámica </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/mac.zip'><span>aquí</span></a><span> para mac y </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/windows.zip'><span>aquí</span></a><span> para Windows. </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/presentacion_bbdd.pdf'><span>Aquí</span></a><span> la tienes en pdf) muestra los elementos básicos de las bases de datos relacionales. </span></li></ul><p><iframe src="https://prezi.com/view/bHpJ0HBvXNXvC96XS5pe/embed" width="1200" height="600"> </iframe></p><ul><li><span>Después de conocer cómo se organizan los datos en una base de datos, procedemos a construir una que recoja las principales características de nuestro inventario forestal. Para ello nos basamos en el siguiente texto que hará las veces de &quot;descripción literal de la base de datos&quot;: </span></li></ul><blockquote><p><em><span>La metodología consiste en visitar una serie de parcelas que se delimitan con puntos. Cada parcela se caracteriza por su nombre, ubicación, altitud, pendiente media, orientación media, temperatura y precipitación media anual. En cada parcela caracterizamos los “pies de monte alto”, que son las plantas consideradas adultas o con porte arborescente. Para ello contamos el número de árboles mayores (más de 2 m de altura), el número de árboles menores, así como la densidad total de árboles y la regeneración (densidad del regenerado). También calculamos el área basimétrica de la parcela. Además, en cada visita anotamos: los nombres de las personas que realizan la visita, la hora de inicio-fin y el tipo de suelo de la parcela.</span></em></p></blockquote><p>&nbsp;</p><ul><li><span>Este proceso da lugar a un diagrama entidad-relación que consta de los elementos que se pueden ver en la siguiente figura (puedes descargar el diagrama </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/2021_2022_bbdd_inventario_forestal.drawio.zip'><span>aquí</span></a><span>)</span></li></ul><iframe frameborder="0" style="width:100%;height:579px;" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=2021_2022_bbdd_inventario_forestal.drawio#R5ZtNe5s4EIB%2FDcfmAcTn0R%2FZ5rDb5mm62%2BYog2JrF5BXiMTur1%2FJSDYgu6EbG9nOpUUjQcRoXkYzGltgkq8%2BUrhc%2FEFSlFmuna4sMLVcN%2FJt%2Fq8QrGtB4ErBnOK0Fjk7wQP%2BgaRQDatwisrWQEZIxvCyLUxIUaCEtWSQUvLSHvZEsvZfXcI50gQPCcx06TecskUtdQEIdh13CM8X6k8Hvlf35FCNlq9SLmBKXhoicGuBCSWE1Vf5aoIyoTylmPq%2B3w70bmdGUcH63BB9eUwfRvNyWsWLRfLt89e71eyDWz%2FlGWaVfON7SBOUQTlntlaaoKQqUiSeZVtg%2FLLADD0sYSJ6X%2FjSc9mC5RlvOfxSn5uc7jOiDK0aIjnXj4jkiNE1HyJ7w0DqTVqOE8v2y24dHCBli8YSKJODcunn20fvlMMvpH5%2BRVdAUwpKubXIJqFsQeakgNntTjpuq2035ndCllJZfyPG1tL0YcVIW5Vcg3T9Xd6%2FaTyKxo2vmtNVs3O6lq2DS1CSiiboJ%2B%2FpKNAgnSP2uvEIJfx0RSm3J4af20gdfXnUtBu2%2FInkM4q0VeMWyNpKLhkl%2F6AJyQjlkoIUYumecJZ1RDDD84I3E65UxOVjYc%2BYfy5GsiPHabpZ932AtG3hCIxsv6aKEVdnJNiDCDgZIp4JRN5g6kc3YXnrPcF8Lgc%2FZlunoB5Rsybv6izCdhpvYEP%2Fzv8543abYGsCrDEo3hEjoWlG%2FHNyI%2BEJ%2FQi4TD8CNFZGfMPJKpZeMSWg84GyTVMSmKVkt796bPYdHxLvMiHxNEjuUZFiYc0i%2BEEp1kOI66XFN01LaJqW0GvxcmPb8SvMbFr3iGKuArGmbwXJv0yQfA2kz1Rg1NybXT1Pne0xMB7HRIZ5CoDb4ckDA%2FMU9ORJpcJOHkM5nY9uOHAMFWikfkX5ElHIKnrFcAK%2FrXcvMA1nbBROxxoqDxcaI%2FBtLi3U94YUJXiJ9zo1GxYVzK6XHy%2Fs8OMY5kc92Jxzc1oMmXBuUU%2B0vDNDK9LQ%2BmRNXGs8EorAqOT%2FpSIAE5SNHDoj2UaWwzWh4upaIYuiNmSB6fwFcDRln3cmPL5QIuKeRMAdDKi4bhhirwOD6R0bcE17HDto79oGT0%2BoiPbS%2BFLzbvA1RUWJU5iKtyHsmrduXZCMhz7AbAlCO%2FQ5WeCzrfQZnpUDqYfO7kJb4BOnHraWu4PwC5qjAtH3cIIbd7LtvvG9nZEqh4Y7i2PQIvHGG9yduRfqzlyNJMFP5FAkUhEzWOJ8EzvFjHKLv2KoOq7NN32EBYwcYf1%2FAkDf86Yzy84B%2FcBJlcnVgZKo%2FbSXiJZckfzq3wptNnq5aKSQkT6BU39j54EY%2FgFnm0eJNVwKH7p5Z39s%2BVPxLL5oZb1%2Bv8LbERhxOm5%2FXwnqtpKrCUm3uutoi%2BeZPpfyvNY57wceSTkDux7Q92DKPcnmcEQpXDcGSIM9uHf04rYRAd9vmsGr41W92qHxkcoJ7h%2FPL%2BoZH3VDCvSzsL9widkmnb%2F9hpxJJbnbOcACQMd42Epy5XuNYWx38yGBEwxMcd9847m5Tz3feEcoVM4TFzjB5P14yNBvobXvbCse1EGazjSCsFu4MTRZXt%2FsyZmR5elJjiZZT7hPiuM6sHI7pS7enuAsHBQrwzXrjTL105bjepdZjuvp5bgML4lip6xQ9n6cUtgpuACRTk80KD3Gq3MHgsdcyeDb1kePZqZ1osN%2BEifFDNYHx2TGUIHTTQcqVJjzLAMfw1GO3%2FEZ%2Fp7fOR0ryuHN3e%2BW65hy9%2BtvcPsf"></iframe><p>&nbsp;</p><p><span>A continuación puedes ver el vídeo con la grabación de la clase:</span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/KO0qtpAIkPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p>&nbsp;</p><h3 id='día-2-18012022'><span>Día 2 (18/01/2022).</span></h3><ul><li><span>A partir del diagrama entidad-relación anterior, construimos una base de datos relacional propiamente dicha. Para ello usamos el programa </span><em><span>base</span></em><span> de la suite de ofimática </span><em><span>LibreOffice</span></em><span>. Es nuestra primera base de datos. </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/miprimerabasededatos.odb'><span>Aquí</span></a><span> puedes descargar la que hice yo durante la sesión. Construimos las tablas con sus campos y finalmente las relaciones.</span></li><li><span>Las primeras relaciones son sencillas (ojo, esto solo sirve para bases de datos no para relaciones entre personas): de uno a muchos. En algunas ocasiones hay relaciones de muchos a muchos, como en el caso de que queramos asignar más de un muestreador a cada visita.</span></li><li><span>Al finalizar esta sesión disponemos del conocimiento necesario para intepretar correctamente la información contenida en el inventario forestal Sinfonevada.</span></li></ul><p>&nbsp;</p><p><span>El siguiente vídeo muestra la grabación de la clase:</span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/Pczm48Q8Q9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p>&nbsp;</p><h3 id='día-3-19012022'><span>Día 3 (19/01/2022).</span></h3><ul><li><p><span>Empezamos la sesión abriendo la versión de la base de datos que contiene la información que necesitamos. </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/input/bbdd_sinfonevada.zip'><span>Aquí</span></a><span> puedes descargarte la base de datos. En el archivo zip hay una versión para Libreoffice y otra para Microsoft Access.</span></p></li><li><p><span>Abrimos la base de datos y tratamos de interpretar su contenido. Vemos que tiene una estructura muy parecida a la que hemos hecho los días anteriores. Identificamos varios campos que podrían ser de utilidad para calcular la densidad. En concreto, vemos que hay dos campos de densidad en las tablas: </span><strong><span>PARCELA_DATOS_CEPAS_M_BAJO</span></strong><span> y </span><strong><span>PARCELA_DATOS_PIES_M_ALTO</span></strong><span>. Sabiamente deducimos que con estos dos campos podemos obtener una capa que asigne un valor de densidad a cada parcela. Decidimos que los dos valores de los campos anteriores son sumables.</span></p></li><li><p><span>También observamos que hay una tabla que no conocíamos: </span><strong><span>explota_PARCELAS_POR_ESTRATO20</span></strong><span>. Esta tabla asigna a cada parcela el código del estrato en el que se encuentra. Recordemos que los estratos son polígonos que tienen la misma orientación, vegetación, piso bioclimático y tipo de suelo. Es una técnica que usamos para estratificar el muestreo antes de hacer el inventario. </span></p></li><li><p><span>Un aspecto muy importante de las bases de datos son las consultas. Gracias a esta herramienta podemos extraer la información que queramos de la base de datos con el nivel de agregación que necesitemos. Para hacer consultas se usa el lenguaje </span><a href='https://es.wikipedia.org/wiki/SQL'><span>SQL</span></a><span>. Durante la clase probamos a hacer una consulta muy sencilla. Si quieres profundizar en esto puedes echarle un vistazo a </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/biblio/taller_SQL.ppt'><span>estas</span></a><span> diapos y a </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/biblio/manual_sql.pdf'><span>este</span></a><span> manual de SQL.</span></p></li><li><p><span>Para entender mejor esto descargamos la capa SIG que contiene la distribución de los estratos. </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/input/estratos.zip'><span>Aquí</span></a><span> puedes descargar el shapefile con los estratos. Y aprovechamos esta necesidad para aprender un poco el manejo de QGIS. Concretamente hacemos lo siguiente:</span></p><ul><li><span>Cargar una capa vectorial.</span></li><li><span>Cargar un servicio WMS con una ortofoto.</span></li><li><span>Cambiar los colores de los polígonos.</span></li><li><span>Guardar un proyecto de QGIS.</span></li></ul></li><li><p><span>La existencia de la capa de estratos abre la posibilidad de obtener un mapa de densidad de otra manera diferente a la esbozada anteriormente. En este caso nos planteamos la posibilidad de obtener un mapa de densidad asignando a todos los polígonos de cada estrato la densidad promedio de los puntos de inventario que hay en los mismos. Discutimos brevemente las ventajas e inconvenientes de esta decisión. Nos quedamos con una idea preliminar de un concepto muy común al trabajar con SIG: la imputación espacial. </span></p></li></ul><p><span>Por una razón que desconozco en esta sesión no se grabó la pantalla. Así que solo tenemos el audio:</span></p><iframe src="https://www.ivoox.com/player_ej_81121377_6_1.html?c1=8daa4d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe><p>&nbsp;</p><h3 id='día-4-21012022'><span>Día 4 (21/01/2022)</span></h3><ul><li><span>Empezamos la sesión reptiendo el concepto de imputación y comparándolo con el de interpolación, que también pondremos en práctica en esta sesión. Las dos figuras mostradas más abajo resumen bien las dos metodologías que usaremos a continuación:</span></li></ul><p><img src="https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/imagenes/imputacion.jpg" referrerpolicy="no-referrer" alt="image"></p><p>&nbsp;</p><p><img src="https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/imagenes/interpolacion.jpg" referrerpolicy="no-referrer" alt="image"></p><ul><li><span>Ahora estamos en disposición de construir un flujo de trabajo detallado con lo que queremos hacer. Hemos identificado una fuente de datos importante. La hemos analizado y hemos encontrado dos posibles formas de hacer lo que necesitamos. Hasta aquí hemos realizado una prospección general de los datos y hemos esbozado posibles análisis. Ahora que sabemos lo que podemos hacer, es momento de organizar bien todos los procesamientos que necesitamos. Es ahora cuando construimos un flujo de trabajo. Puedes verlo abajo y descargarlo </span><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/presentaciones/workflow_densidad.drawio.zip'><span>aquí</span></a><span>. </span></li></ul><iframe frameborder="0" style="width:100%;height:1227px;" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=workflow_densidad.drawio#R%3Cmxfile%20pages%3D%222%22%3E%3Cdiagram%20id%3D%22C5RBs43oDa-KdzZeNtuy%22%20name%3D%22Page-1%22%3E7V1bd5pKFP41rnXOAyyY4foYo6a59DSJbdP0xUUQlQgMAYyaX39muCiXETFRwbRd57Qy3Ofbl2%2Fv2TO04Lm9uPA0d%2FIVDQ2rBbjhogU7LQAUkcN%2Fk4Zl1ACALEQtY88cRm38uqFvvhlxY3zieGYODT9zYICQFZhutlFHjmPoQaZN8zw0zx42Qlb2rq42NgoNfV2ziq0P5jCYxK8BobTe8cUwx5Pk1pIYv6CtJUfHr%2BJPtCGap5pgtwXPPYSC6Je9ODcs0ntJxzxcLh%2Bsm6l0cXXnv2g%2F2tff%2F%2FvJRBfr7XLK6h08wwnefenOuXfdQ7ezhdXRBoL9xZ%2BLFgOjS79q1izusPhdg2XSgx6aOUODXIRvwfZ8YgZG39V0sneOZQa3TQLbindrnh7LAC%2FjTQ8FWmAiB28zKocb%2FMBDU%2BMcWcjDbQ5y8KHtkWlZSVMLwF6vd9ZVcHvF146759XwAmORQj3uhgsD2UbgLfEh8V4GcJCFYnRaLNgML0FWitvma0nhsaywQI3aJylBkSBkhURQYyEdr261xgH%2FiKGgwzLjncVA%2Bem0pzfqUjd%2FKRfoB8OrteKCQWh3ZI4je0bICVLto%2FAPDbQuJ4ADgqayEp9BTJRZUMRLlWVWocAFZJEVD4WWUjdaQ%2BlJEqUiKhgqoOsHVaUUDDEwKs%2FKFGCUFQAZXIDCcvDjwLSV%2Bxu7N%2FrR9ri56J27D%2BaLzSTWP4WDMcTuId5EXjBBY%2BRoVnfd2l4jRbp6fcwNQm6Mz7MRBMsYIW0WoCx6xsIMfpHT8ftGW4%2BpPZ1FfOVwY5lsOPh9UyeRzcf0vvVp4VZy3m64%2Bmjm6XFH3N39%2BiX%2B%2FqV%2Bu5Ff9duRrXQeIZMYukDzxkZ8Qe5emLrX5jWYPIvTl9%2BcNAcTBsZXJN1ZKieeYWHZfc164x2A%2FuEb3renZ0INAGdpT4YVndq%2FuyG0xHB8c6gNBy0gWfh5208e%2FjUmvxYD3Cs6vnt0y0ROSl47K1hp3Z0g%2B2nmb9dbYitjsZAPqHSCxLGJiVm5L5VjufQfqaCBAsUsJm07III3U6CUgpTteqogpZgUrevHWBvdD%2FbjilxqT8lludL%2Bhdgm5WwaI3BcpQ7F5nB3a0bp0oKBo%2Fde8s5pzxNpApHFTF9KLzOU7GD8UErP8AGyu1jvS5SHRcOn5EL44aJrRbuKFtWyMJk3Kng1340Y%2FshcEPtK0Y8SEamkIDFacAVCCq3kMhnvw33c89CfGRwGmL7p4MOMV22I7RrX6f7Xv%2BycdapChSMYl%2FwcaoHmB8irANr%2BMUr4XFGdKAAJIqsciBzw9ZCDdzr695CK95MDOsZKVXIA9k0O4lNvkRnqTixCQM3HcEJOn6N3ik9by8uZ52nL1GEuOcAvuRGn5m%2FEp6%2B3%2FQRZzclr9Ahr6V31yp5JkIFjBQ0LYQVPrJwUCeIVIdvFOFTHAXxNDKhiPFKMCxtscvZsPpKQYav5EOTjmA9Mo3MSlLMe0ZMWrMf79XUvFGCl7qkIp8T9l%2Bo8TPdsUecTvmDaYZY1LVREUU1ds84sc0wSEwERxlXrDXnnW%2BSbcdriCQUBsvEBYWe0NX06DsWallgKb3aWcEWORhzj5%2BlMgoCkkc8INKCnDx3Impjrj0ysMB6r4zuCHuE6%2BB%2FS7pNNZLvkNzO2lu6EGZmWwYyQZ2sBQxAGokR6kbTq%2FmuyJ1i6BsPjqMB1xoeyZ4IkFoK67TEdpFg0eBiLRtfVWiza%2By3TmdS9ZxbLi%2B7zzagnjSdg3LPivHkFw8Tt2zDtmPSootHlqYxa4mmQM7SKzKpySqz5glirgOKoeZaDqbOOGGbD2CPtPcz2J25jwuzEbFQ3WXLWXAE6QEcIwalJvdX7rEH7qrkkbI45sV%2Fky6bzijtJ80xU6P%2FEF%2BJ%2B1CzLsNDY04hHcw3PxA9sePl9t%2BsdO1LmSGowXeM5KK%2F%2Fw3pzEDTTekcBCO4BIHoArv7BbFio7HTEmp3OD8f0yJsj8rcWeObTjKo7%2F3T73%2B8HgPs3urNlOtPoAlmWNkS6z76MTZ9FHiZTPcjiOK5nOPEu%2FM8MP8jA1pyZhkWoN0fe1HTGg7kZTAav%2BOnIc%2FSiHwPXQy6hnIbPhhAD%2BIzZus%2Bs2yu4TKE8Bd28wBdmzK6ssmr6T9HsNjLxL8DmERVeAmw2pcSLxbQ%2FjZyouxvJ93Nu4Q9gIwLcAGrz2UipGS%2BykSSeT2xs3q5mMninS0h2ALQuQgLgn0xI5IqERAQ1E5JLG%2BsJfkxyNfz%2F3cVlv4q%2FkU%2FKy1PH%2BFkeSoqkQFnGroqXOGgw%2FDHdfUGNPCjdvy2%2FXMnqmz55euKlr%2Fdakk4pq4ZqdI6oVOq3q0fdlTHnyAnTsIl%2BhH6CZDRbe%2BXl%2BIc2JsScJFgHcf%2BBnu4ZWmAMLG1peCtSHjbiYxnHmDPRLmbkIZvRHMZYmH64L2yvoMgREqesyDnGrtSqwlRPmLjYU1FZ6ktQImzqcXUH2H3DMnTdxF3lRa9PxnR88kQO2TZxez6O3fy%2BJ6UX2YJeAHOR7BHVologS9eV0m6vJY4VBI7NJgkgr7KyXNa39aXcqb36yWLczZJzkiFumR2lRbjZMDeya2s7h6U7MXQFEJob5X4Q0tqy7lIdrn0V5K42HrMR73Hq25NRkeYM9VbMTMi1glZvZiKJqLYSuWZhBmtRtA%2Bxt62UWqyIxNGmh1Sb5VgkE521N4pmvNK9DzbiQc7Xx%2FVOOu7Q0MfkC6FscziMoDSwQ4kZGwEzLjLF1xXbLbFDrkUG0uJ5Xgl08b2T7VSBVKfb7ohqFmKwu7pVZxsrv7SaAyFm65EEynTJQ%2FkyaqaJNvvhlMJWurmjJGKbZe7c7tvLN6379fH54YfkT0bIfe1Ssn6XtjsLNN1sncNWGxKKZ%2FiYi5kkfbRVz7ZOFI6bqusjjQxmsc8pXK%2FXFmVug2Im8zPhIRWQzykgkIujkTxP0bh8HfzeUC5q3CXpdxdZpwZ0GsAtlrfXO%2Btw7UPmQvKWlgr0UccrRVoW%2F4QD8P0AJfI8C9Ipqly1gAIKsO0JtU0JqoqDyNS5sCVse2M%2Bq7nx%2BJ5UEaqslAVVzKUl5QLGeyI9%2By2wEcVSIOuZWZvzaEACrKoU9akReUl6r0qfyy6WiM5JZiZLKTUlNWn6YUVjmrysRlyixKVnuOgpQ29OJkX5UXD3b%2BLK7dm%2BxqZdD%2BmG75PRac0ak%2F3kZDILKCGrZF5SMjpN9pnDeWZf1r7ScxwNtK8C5idZ7wWxhRWk1GBzcQ6RKtMWZjnsuBotashzlsvOwymKRTl%2F2t8wbIlQ7kR4FLbodGuvPyiuS4Z1iQt%2FccUqvcZFlQdFLLGWsYYLbHrSMwBFekpbWOFgo4CwmGx1MfsI1YB0ToIinyyo8ufhmJCkLHI8LxSQEwF1zaxDYSfUMsx02CEL2rRz%2BoGxfduaT01iGYnPFVkAXmLldDQj7ZkflSteeYFrQwpRBGFbkU%2FDClEgbXG%2FfQR8gTlqTiWKvAHxxgV8W%2FJgHmGTZ7xPnADgbETmTjhDFB6bTZOteF24klJYkhKg8MjQV%2BGdnhmg1UzQchkpn3Td3ADxo8JwlBxYxUU4%2F671uNExUjtMKPpF6nFV3eLehxnLnjplje81ou3mW0mGpmm1r7ySq3zlim5QpBA%2FcQ%2FEj9qr4l%2Fd2W2yFKUQpkxcG7JiCPURG0gbw3m4XJFOJDktTmkQa6R26icjjZsF55Q5Y%2BQ5CJRhpUpI%2FtYMsTTz6GFdZccIjS0jXmcqmmHVwyf2eGXRZr7P1dv%2Bs%2FbM3X2biQMdPN7CK2F2eTP9pk7JAgamMW%2FB3swnthITRM9MlpYqlatTJZofFKAG8UxYyyThXO9vKlA5DZdK7VdAKXujAwD27VPjU3PLA0IuO5Ii5Iuq3r08YDVBA8VByxOkupS1tKHEsQpXOugvQlre82D0N1nZ9jTK6yvagj1TXlpZaqncNpnzwiauOp9bM1iQVFYWSxf2aRjpTVLtn5r1Jlyj%2BbS3ImigABo1l%2FqPHW%2FqmED%2B20pm9VHqZ8IdmWnLp0tRd0D7CBP6NPnMvtS%2BX%2F%2F%2BfSY%2Fi%2BZ02jfaTC18tCGkEVKSmNROOhJnxAYst4CYyB%2BXNVKG3289NJzpZAUp7h9ds%2FSZhUNdbzUx18ba7v%2FbeCLJK9zqs1IrD1mskj8yc4S1ZE4PzgDLBgK2B2jHSnpWhKgJ8zCPBFHizJuDUTWSTrXZDeToxQUiJcp3oeqj5dR%2B%2FGSsfLOsnAIp36l%2BIVoYI1%2B5EHptiyzBmypVt42hqTkB2WXm513umMkmn0sYI3Y29lhy6UxmezAdv91Y9qtz0X98m8sT%2FiUI9J%2F2lzvz%2FN4YkxR2NrMdXn4wN54q6Dso1ffmBg4fFMh6ctt0S3Fiy35RX6JqSFBbXUPZU3862i6IMqsUQiJWphQ8HIy5Uzu8FuL%2BflEvLVndKuu1MXLq09S7AtEqKXHoFYgqM%2FRaIfsAQW9g5chqkO506PknKxXZLCl%2F6XlEzylT33Zk6GlGfjXz3qaP8uxB879Orr55P9XX9qRrjQY9udsXroxKtSabCdJn4eMNqzV599rmmz9gthGpplHC%2FAdMGBkDKwpAhqIskXlhwGAoc6GOOCeR2sm11Je%2Fn32Ufpk3zT7KPol3%2BPESJZdPYyp%2BwrfCpZSDjbxoQ935KV5p99f%2FPVgMYJbXX6xGLXufw602CTomXd3vp1VXX11596dVq6Wz%2Fn5a9fCfVuWVbGUNQ8k%2BHPFDquccmk1mDz3YvzNs%2B1qbX95B5sQyb%2FQviFNsQ%2BmX5PfsXnb9rDuEObmAMbmr%2FFn33AmtHb%2FrXk00avEj76kkPoI4UVd1BntP5R5HnIRcYrRcnIqnc1zudFFgQXrajFiJSm2XU7zpIRSkD8fBw%2BQrImvnwu7%2F%3C%2Fdiagram%3E%3Cdiagram%20id%3D%22Kc0jzny5qIj9sLP9HgPE%22%20name%3D%22Page-2%22%3EldG9DsIgEADgp2E0qUWNs%2FUvJi5q4s9iSDkLSnuVYlp9emugVuKiC4GP4%2BAOQqO0mmmWiyVyUCQMeEXomIThcDCsxxfcLfQotZBoyS11W1jLBzgMnN4kh8ILNIjKyNzHGLMMYuMZ0xpLP%2ByEyr81Zwl8wTpm6lu3khvhyuoHrc9BJqK5uRu4nZQ1wQ4KwTiWH0QnhEYa0dhZWkWgXr1r%2BrLf3LaH83R0XV12CziWQhfnjk02%2FefIuwQNmfk1dT1pn1YvvP%2Blkyc%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe><p><span>  </span></p><ul><li><p><span>Para ejecutar el flujo de trabajo anterior necesitaremos la siguiente información además de la base de datos que ya debemos de tener descargada:</span></p><ul><li><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/input/consultas.zip'><span>Consultas</span></a><span> en lenguaje SQL que usaremos para agregar la información de la manera necesaria para obtener la densidad (tanto en el caso de la densidad por parcela como en la densidad por estrato).</span></li><li><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/input/distribucion_pinares_sierra_nevada.zip'><span>Distribución de los pinares de Sierra Nevada</span></a><span>. Se trata de un fichero de formas (shapefile) que contiene los polígonos del mapa de vegetación que están ocupados por pinares de repoblación. </span></li></ul></li><li><p><span>Empezamos con el cálculo del mapa de densidad mediante imputación. Para ello seguimos los pasos descritos en el flujo de trabajo. Por si no consigues tus propios resultados, ahí van los que he generado yo:</span></p><ul><li><span>Tabla </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_x_estrato.txt'><span>densidad_x_estrato.txt</span></a></em><span> generada a partir de la base de datos.</span></li><li><span>Fichero de formas mostrando la densidad de cada polígono de Sierra Nevada: </span><em><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/output/densidad_x_estrato.zip'><span>densidad_x_estrato.zip</span></a></em></li><li><span>El mismo mapa anterior pero en formato raster: </span><em><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/output/densidad_x_estrato.tif'><span>densidad_x_estrato.tif</span></a></em></li><li><span>Mapa de los pinares de repoblación en formato raster: </span><em><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/output/mascara_pinares.tif'><span>mascara_pinares.tif</span></a></em></li><li><span>Densidad de los pinares en formato raster: </span><em><a href='https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/raw/2021__2022/geoinfo/output/densidad_pinar_x_estratos.tif'><span>densidad_pinar_x_estratos.tif</span></a></em></li></ul></li></ul><p><span>A continuación puedes ver el vídeo de la sesión:</span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/Utj_rQSS0_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><h3 id='día-5-24012022'><span>Día 5 (24/01/2022)</span></h3><ul><li><p><span>Una vez ejecutada esta primera &quot;hebra&quot; del flujo de trabajo, abordamos la obtención de un mapa de densidad mediante interpolación. Esta técnica es algo más compleja de entender, así que os paso aquí las siguientes referencias por si queréis profundizar en el tema:</span></p><ul><li><a href='http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php'><span>Spatial interpolation: a brief introduction</span></a><span>: Muy buen resumen de la teoría de la interpolación y de los dos grandes grupos de técnicas que utilizaremos.</span></li><li><a href='http://planet.botany.uwc.ac.za/nisl/GIS/spatial/index.htm'><span>Introduction to spatial analysis</span></a><span>: Texto bastante completo en el que se detallan varias técnicas de interpolación. Hace mucho hincapié en la interpolación de modelos digitales de elevaciones.</span></li><li><a href='https://www.geodose.com/2019/03/spatial-interpolation-inverse-distance-weighting-idw.html'><span>Spatial interpolation with IDW method explained</span></a><span>: Guía muy detallada y completa sobre cómo aplicar el método IDW en QGIS.</span></li></ul></li><li><p><span>Al igual que antes, abajo puedes ver los resultados que obtendríamos:</span></p><ul><li><span>Tabla </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_x_parcela.txt'><span>densidad_x_parcela.txt</span></a></em><span> generada a partir de la base de datos del inventario forestal.</span></li><li><span>Fichero de formas mostrando la densidad de cada parcela de Sierra Nevada: </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_x_parcela.zip'><span>densidad_x_parcela.zip</span></a></em></li><li><span>Fichero de formas mostrando la densidad de cada parcela de pinar: </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_pinar_x_parcela.zip'><span>densidad_pinar_x_parcela.zip</span></a></em></li><li><span>Capa raster mostrando la densidad de toda Sierra Nevada interpolando la densidad de las parcelas con pinar: </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_interpolada.tif'><span>densidad_interpolada.tif</span></a></em><span>. Ojo, esta capa está en un sistema de referencia diferente al resto (WGS84)</span></li><li><span>Capa raster mostrando la densidad de los pinares de Sierra Nevada: </span><em><a href='https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/2021__2022/geoinfo/output/densidad_interpolada.tif'><span>densidad_pinar_interpolada.tif</span></a></em></li></ul></li></ul><p><span>A continuación puedes ver el vídeo de la sesión:</span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/rtMJjCmGULo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><h2 id='vídeo-resumen'><span>Vídeo resumen</span></h2><p><span>El siguiente vídeo describe la ejecución de todo el flujo de trabajo. No es una transcripción de una clase, sino una narración del proceso paso a paso.</span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/AYFUjLEC7h4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p>&nbsp;</p><p>&nbsp;</p></div></div>
+</body>
+</html>
