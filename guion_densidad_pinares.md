@@ -125,6 +125,7 @@ La secuencia de acciones que se muestra a continuación pretende simular el proc
   + Fichero de formas mostrando la densidad de cada parcela de pinar: *[densidad_pinar_x_parcela.zip](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/output/densidad_pinar_x_parcela.zip)*
   + Capa raster mostrando la densidad de toda Sierra Nevada interpolando la densidad de las parcelas con pinar: *[densidad_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/output/densidad_interpolada.tif)*. Ojo, esta capa está en un sistema de referencia diferente al resto (WGS84)
   + Capa raster mostrando la densidad de los pinares de Sierra Nevada: *[densidad_pinar_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/output/densidad_interpolada.tif)*
++ Por si te resulta útil, [aquí](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/main/geoinfo/input/enp_sierra_nevada.zip) puedes descargar el mapa con los límites del espacio protegido de Sierra Nevada.
 
 
 
