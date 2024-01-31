@@ -42,7 +42,7 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 
 <p><iframe src="https://prezi.com/view/8Nl5PECsoSUnymoqyFvk/embed" width="900" height="600"> </iframe></p>
 
-+ Después de conocer cómo se organizan los datos en una base de datos (BD), proponemos la tarea de construir una BD. Esta tarea está abierta a que cada estudiante cree una BD que le sea de utilidad o recoja información interesante. En clase practicaremos con una BD que contiene información de un inventario forestal. Nuestra **descripción literal** sería:
++ Después de conocer cómo se organizan los datos en una base de datos (BD), vamos a construir una base de datos sencilla que recoja información sobre un inventario forestal. La **descripción literal** de esta base de datos sería:
 
 >*La metodología consiste en visitar una serie de parcelas que se delimitan con puntos. Cada parcela se caracteriza por su nombre, ubicación, altitud, pendiente media, orientación media, temperatura y precipitación media anual. En cada parcela caracterizamos los “pies de monte alto”, que son las plantas consideradas adultas o con porte arborescente. Para ello contamos el número de árboles mayores (más de 2 m de altura), el número de árboles menores, así como la densidad total de árboles y la regeneración (densidad del regenerado). También calculamos el área basimétrica de la parcela. Además, en cada visita anotamos: los nombres de las personas que realizan la visita, la hora de inicio-fin y el tipo de suelo de la parcela.*
 
@@ -50,7 +50,7 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 
 + Una vez creada la estructura conceptual de nuestra BD podremos crear el objeto digital que la contiene. Para ello usaremos el programa *Access* de la suite de ofimática *Microsoft Office*.
 
-+ Es importante tener en cuenta que la base de datos que hemos creado está vacía. Solo hemos aprendido a construir su estructura. Para poner datos en su interior basta con ir rellenando a mano las tablas. Otra opción más elaborada es usar formularios de carga de datos. No tenemos tiempo en esta asignatura de aprender cómo se construyen formularios. Pero te resultará fácil de aprenderlo por tí mismo/a una vez que has entendido bien cómo se construye una base de datos. 
++ Es importante tener en cuenta que la base de datos que hemos creado está vacía. Solo hemos aprendido a construir su estructura. Para poner datos en su interior basta con ir rellenando a mano las tablas. Otra opción más elaborada es usar formularios de carga de datos. No tenemos tiempo en esta asignatura de aprender cómo se construyen formularios, pero te resultará fácil de aprenderlo una vez que has entendido bien cómo se construye una base de datos. 
 
-+ Al finalizar esta sesión dispondremos del conocimiento necesario para intepretar correctamente la información contenida en el inventario forestal Sinfonevada.
++ Al finalizar esta sesión dispondremos del conocimiento necesario para intepretar correctamente la información contenida en el inventario forestal SinfoNevada.
 
