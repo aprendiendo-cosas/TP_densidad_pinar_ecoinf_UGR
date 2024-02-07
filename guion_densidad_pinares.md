@@ -74,9 +74,9 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 
 + Para ello usaremos dos técnicas muy diferentes, la interpolación y la imputación espacial, lo que dará lugar a dos resultados distintos.
 
-![image](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/imagenes/imputacion.jpg)
+![image](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/imagenes/imputacion.jpg?raw=true)
 
-![image](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/imagenes/interpolacion.jpg)
+![image](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/imagenes/interpolacion.jpg?raw=true)
 
 + Ahora estamos en disposición de construir un flujo de trabajo detallado con lo que queremos hacer. Hemos identificado una fuente de datos importante. La hemos analizado y hemos encontrado dos posibles formas de hacer lo que necesitamos. Hasta aquí hemos realizado una prospección general de los datos y hemos esbozado posibles análisis. Ahora que sabemos lo que podemos hacer, es momento de organizar bien todos los procesamientos que necesitamos. Es ahora cuando construimos un flujo de trabajo. Puedes verlo abajo o descargarlo [aquí](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/presentaciones/workflow_densidad.drawio) y abrirlo con https://app.diagrams.net/. 
 
