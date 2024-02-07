@@ -52,7 +52,7 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 
 + En este vídeo se muestra el proceso completo:
 
-<iframe width="560" height="315" src="https://youtu.be/QqiNn2S8Qss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QqiNn2S8Qss " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 + Es importante tener en cuenta que la base de datos que hemos creado está vacía. Solo hemos aprendido a construir su estructura. Para poner datos en su interior basta con ir rellenando a mano las tablas. Otra opción más elaborada es usar formularios de carga de datos. No tenemos tiempo en esta asignatura de aprender cómo se construyen formularios, pero te resultará fácil de aprenderlo una vez que has entendido bien cómo se construye una base de datos. 
 
