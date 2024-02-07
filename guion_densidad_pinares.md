@@ -91,7 +91,7 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 + También será necesario considerar la [distribución de los pinares en Sierra Nevada](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/input/distribucion_pinares_sierra_nevada.zip). Se trata de un fichero vectorial que contiene los polígonos del mapa de vegetación que están ocupados por pinares de repoblación. 
 
 + Empezamos entonces con el cálculo del mapa de densidad mediante imputación. Para ello seguimos los pasos descritos en el flujo de trabajo. Por si no consigues tus propios resultados, ahí van los archivos intermedios:
-  + Tabla *[densidad_x_estrato.txt](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_estrato.txt)* generada a partir de la base de datos.
+  + Tabla *[densidad_x_estrato.txt](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_estrato.txt)* generada a partir de la base de datos.
   + Fichero de formas mostrando la densidad de cada polígono de Sierra Nevada: *[densidad_x_estrato.zip](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_estrato.zip)*
   + El mismo mapa anterior pero en formato raster: *[densidad_x_estrato.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_estrato.tif)*
   + Mapa de los pinares de repoblación en formato raster: *[mascara_pinares.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/mascara_pinares.tif)*
@@ -105,11 +105,11 @@ El hilo argumental seguido en este acto docente es una cascada de razonamientos.
 + Ahora podemos comparar los mapas obtenidos. Además, veremos otro mapa de densidad obtenido mediante teledetección. Reflexionaremos sobre los resultados obtenidos en los tres casos.
 
 + Al igual que antes, abajo puedes ver los resultados intermedios que obtendríamos en cada paso:
-  + Tabla *[densidad_x_parcela.txt](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_parcela.txt)* generada a partir de la base de datos del inventario forestal.
-  + Fichero de formas mostrando la densidad de cada parcela de Sierra Nevada: *[densidad_x_parcela.zip](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_parcela.zip)*
-  + Fichero de formas mostrando la densidad de cada parcela de pinar: *[densidad_pinar_x_parcela.zip](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_pinar_x_parcela.zip)*
-  + Capa raster mostrando la densidad de toda Sierra Nevada interpolando la densidad de las parcelas con pinar: *[densidad_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_interpolada.tif)*. Ojo, esta capa está en un sistema de referencia diferente al resto (WGS84)
-  + Capa raster mostrando la densidad de los pinares de Sierra Nevada: *[densidad_pinar_interpolada.tif](https://raw.githubusercontent.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_pinar_interpolada.tif)*
+  + Tabla *[densidad_x_parcela.txt](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_parcela.txt)* generada a partir de la base de datos del inventario forestal.
+  + Fichero de formas mostrando la densidad de cada parcela de Sierra Nevada: *[densidad_x_parcela.zip](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_x_parcela.zip)*
+  + Fichero de formas mostrando la densidad de cada parcela de pinar: *[densidad_pinar_x_parcela.zip](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_pinar_x_parcela.zip)*
+  + Capa raster mostrando la densidad de toda Sierra Nevada interpolando la densidad de las parcelas con pinar: *[densidad_interpolada.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_interpolada.tif)*. Ojo, esta capa está en un sistema de referencia diferente al resto (WGS84)
+  + Capa raster mostrando la densidad de los pinares de Sierra Nevada: *[densidad_pinar_interpolada.tif](https://github.com/aprendiendo-cosas/TP_densidad_pinar_ecoinf_UGR/blob/main/geoinfo/output/densidad_pinar_interpolada.tif)*
 
 ## Vídeo resumen
 
